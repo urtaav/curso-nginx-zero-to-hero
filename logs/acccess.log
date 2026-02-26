@@ -1,0 +1,5 @@
+[26/Feb/2026:16:35:48 +0000] IP:172.19.0.1 Solicitud:"GET / HTTP/1.1" Status:304
+[26/Feb/2026:16:36:00 +0000] IP:172.19.0.1 Solicitud:"GET / HTTP/1.1" Status:304
+[26/Feb/2026:16:36:00 +0000] IP:172.19.0.1 Solicitud:"GET / HTTP/1.1" Status:304
+[26/Feb/2026:16:36:00 +0000] IP:172.19.0.1 Solicitud:"GET / HTTP/1.1" Status:304
+[26/Feb/2026:16:36:05 +0000] IP:172.19.0.1 Solicitud:"GET / HTTP/1.1" Status:200

@@ -1,0 +1,122 @@
+
+
+
+Cómo usarlo:
+
+Para encenderlo: docker-compose up -d
+
+Para apagarlo: docker-compose down
+
+curso-nginx/             <-- Tu carpeta raíz
+├── docker-compose.yml   <-- Configuración de Docker
+├── nginx.conf           <-- ARCHIVO MAESTRO (Contiene user, events y http)
+├── conf/                <-- Carpeta para sitios específicos
+│   └── sitio.conf       <-- Bloque SERVER (Escucha el puerto 80)
+├── html/                <-- Tus archivos web
+│   └── index.html       <-- Página de prueba
+└── logs/                <-- Carpeta generada automáticamente
+    ├── access.log       <-- Registro de visitas
+    └── error.log        <-- Registro de errores
+
+
+
+
+
+
+
+
+
+
+
+El flujo de trabajo durante el curso
+Cada vez que el curso te pida cambiar algo en la configuración (nginx.conf):
+
+Edita el archivo conf/nginx.conf en tu editor favorito (VS Code, etc.).
+
+Reinicia Nginx para aplicar los cambios sin borrar el contenedor:
+
+
+docker exec my-nginx-container nginx -s reload
+
+
+Refresca tu navegador en localhost:8080.
+
+
+
+
+Paso 1: Estructura y Sintaxis (nginx.conf)
+Objetivo: Entender el archivo "maestro".
+
+Crea el archivo nginx.conf en la raíz de tu proyecto. Este archivo es el que "envuelve" todo.
+# Directiva simple: define el usuario
+user nginx; 
+
+# Bloque de eventos (Obligatorio)
+events {
+    worker_connections 1024;
+}
+
+# Bloque HTTP (Aquí vive toda la configuración web)
+http {
+    # Directiva include: carga tipos de archivos (CSS, JS, etc.)
+    include /etc/nginx/mime.types;
+
+    # Aquí le decimos que cargue nuestros archivos de sitios
+    include /etc/nginx/conf.d/*.conf;
+}
+
+Paso 2: Comandos básicos de NGINX
+Objetivo: Aprender a controlar el servidor sin apagar el contenedor.
+
+Validar: Antes de cualquier cambio, corre en tu terminal:
+docker exec mi-nginx nginx -t
+(Debe decir: syntax is ok / test is successful).
+
+Recargar: Si haces un cambio en el archivo, no reinicies el contenedor, solo recarga:
+docker exec mi-nginx nginx -s reload
+
+
+Paso 3: Servidor Web Básico (root y listen)
+Objetivo: Servir tu primer HTML.
+
+Crea el archivo conf/sitio.conf. Aquí practicamos los bloques server y location.
+server {
+    listen 80;               # Nginx escucha internamente en el 80
+    server_name localhost;    # Nombre del servidor
+
+    location / {
+        root /usr/share/nginx/html; # Carpeta donde están los archivos
+        index index.html;           # Archivo por defecto
+    }
+}
+
+Asegúrate de tener un index.html en tu carpeta local html/.
+
+
+Paso 4: Configuración de Logs (Personalización)
+Objetivo: Ver quién entra a tu sitio y qué errores hay.
+
+Vamos a modificar el nginx.conf (el del paso 1) para incluir un formato especial dentro del bloque http:
+
+http {
+    include /etc/nginx/mime.types;
+
+    # Definimos un formato llamado "especial"
+    log_format especial '[$time_local] IP:$remote_addr Solicitud:"$request" Status:$status';
+
+    # Aplicamos el log de acceso usando ese formato
+    access_log /var/log/nginx/access.log especial;
+    error_log /var/log/nginx/error.log warn;
+
+    include /etc/nginx/conf.d/*.conf;
+}
+
+Ahora, ve a tu carpeta local logs/. Verás archivos llamados access.log y error.log. Si entras a http://localhost:8080, verás cómo se escriben los datos en el formato "especial" que creaste.
+
+Estructura de archivos corregida:
+En la raíz: nginx.conf (El que tiene user, events y el bloque http).
+
+En la carpeta conf/: Crea un archivo llamado misitio.conf (Este NO debe tener user ni events, solo el bloque server).
+
+El flujo de carga:
+Nginx arranca leyendo /etc/nginx/nginx.conf. Dentro de ese archivo, hay una línea que dice include /etc/nginx/conf.d/*.conf;. Si tú metes un archivo con la directiva events dentro de conf.d, Nginx se confunde porque events no puede ir dentro de http.

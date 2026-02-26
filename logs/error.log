@@ -1,0 +1,2 @@
+2026/02/26 16:30:37 [emerg] 1#1: "user" directive is not allowed here in /etc/nginx/conf.d/nginx.conf:2
+2026/02/26 16:31:15 [emerg] 1#1: "events" directive is not allowed here in /etc/nginx/conf.d/nginx.conf:3
