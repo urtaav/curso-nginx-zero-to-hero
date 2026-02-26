@@ -219,7 +219,8 @@ location = /404.html {
 }
 
 ```
-
+3. ¿Por qué usamos internal?
+La directiva internal es una medida de seguridad. Le dice a Nginx: "Este archivo solo puede ser servido si yo (el servidor) lo decido por un error o una redirección interna; no permitas que un usuario lo pida directamente desde el navegador".
 ---
 
 ### 5. Compresión y Caché (`gzip` y `expires`)

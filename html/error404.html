@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>404 - Página no encontrada</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+    :root {
+        --bg-dark: #0f1117;
+        --bg-secondary: #1a1d25;
+        --accent: #6c5ce7;
+        --accent-soft: #8f7fff;
+        --text-main: #ffffff;
+        --text-muted: #b5b8c5;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        height: 100vh;
+        font-family: 'Inter', sans-serif;
+        background: radial-gradient(circle at 30% 30%, #1a1d25 0%, #0f1117 60%);
+        color: var(--text-main);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        overflow: hidden;
+        position: relative;
+    }
+
+    /* Fondo tipo espacio con partículas */
+    body::before {
+        content: "";
+        position: absolute;
+        width: 200%;
+        height: 200%;
+        background-image: radial-gradient(white 1px, transparent 1px);
+        background-size: 40px 40px;
+        opacity: 0.05;
+        animation: moveStars 120s linear infinite;
+    }
+
+    @keyframes moveStars {
+        from { transform: translate(0, 0); }
+        to { transform: translate(-500px, -500px); }
+    }
+
+    .container {
+        position: relative;
+        z-index: 1;
+        max-width: 800px;
+        padding: 2rem;
+    }
+
+    .code {
+        font-family: 'Orbitron', sans-serif;
+        font-size: clamp(6rem, 15vw, 12rem);
+        font-weight: 800;
+        letter-spacing: 8px;
+        background: linear-gradient(90deg, var(--accent), var(--accent-soft));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 0 20px rgba(108, 92, 231, 0.3);
+    }
+
+    h1 {
+        font-size: clamp(1.5rem, 3vw, 2.5rem);
+        margin-top: 1rem;
+        font-weight: 600;
+    }
+
+    p {
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        color: var(--text-muted);
+        line-height: 1.6;
+    }
+
+    .btn {
+        display: inline-block;
+        margin-top: 2rem;
+        padding: 0.9rem 2rem;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        color: white;
+        background: linear-gradient(90deg, var(--accent), var(--accent-soft));
+        transition: 0.3s ease;
+        box-shadow: 0 0 15px rgba(108, 92, 231, 0.3);
+    }
+
+    .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 0 25px rgba(108, 92, 231, 0.6);
+    }
+</style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="code">404</div>
+        <h1>¡Te saliste del mapa!</h1>
+        <p>
+            La página que buscas no existe en este servidor Nginx ejecutándose en Docker.
+            Quizá cambió de ruta o fue eliminada.
+        </p>
+        <a href="/" class="btn">Volver al inicio</a>
+    </div>
+</body>
+</html>
