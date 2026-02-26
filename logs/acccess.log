@@ -35,3 +35,5 @@
 [26/Feb/2026:17:13:55 +0000] IP:172.19.0.1 Solicitud:"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" Status:404
 [26/Feb/2026:17:14:32 +0000] IP:172.19.0.1 Solicitud:"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" Status:404
 [26/Feb/2026:17:14:54 +0000] IP:172.19.0.1 Solicitud:"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" Status:404
+[26/Feb/2026:17:15:00 +0000] IP:172.19.0.1 Solicitud:"GET / HTTP/1.1" Status:200
+[26/Feb/2026:17:15:00 +0000] IP:172.19.0.1 Solicitud:"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" Status:404
