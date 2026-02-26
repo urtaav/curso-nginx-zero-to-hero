@@ -120,3 +120,135 @@ En la carpeta conf/: Crea un archivo llamado misitio.conf (Este NO debe tener us
 
 El flujo de carga:
 Nginx arranca leyendo /etc/nginx/nginx.conf. Dentro de ese archivo, hay una línea que dice include /etc/nginx/conf.d/*.conf;. Si tú metes un archivo con la directiva events dentro de conf.d, Nginx se confunde porque events no puede ir dentro de http.
+
+
+
+¡Excelente! El **Módulo 3** es donde realmente empiezas a controlar el tráfico. Aquí aprenderás cómo Nginx decide qué archivos mostrar dependiendo de lo que el usuario escriba en la URL.
+
+Vamos a dividir esto en laboratorios prácticos dentro de tu estructura de Docker.
+
+---
+
+### 1. Manejo de Rutas (Bloques `location`)
+
+**Objetivo:** Entender la prioridad. Nginx no lee las rutas en orden de arriba abajo, sino por **especificidad**.
+
+Modifica tu `conf/sitio.conf`:
+
+```nginx
+server {
+    listen 80;
+    server_name localhost;
+
+    # 1. Coincidencia por PREFIJO (Cualquier cosa que empiece con /documentos)
+    location /documentos {
+        return 200 "Estás viendo la carpeta de documentos general.";
+    }
+
+    # 2. Coincidencia EXACTA (Solo si la URL es exactamente /contacto)
+    location = /contacto {
+        return 200 "Página de contacto directa.";
+    }
+
+    # 3. EXPRESIÓN REGULAR (Busca archivos que terminen en .jpg, .png, etc.)
+    # El ~* significa: insensible a mayúsculas
+    location ~* \.(jpg|jpeg|png)$ {
+        return 200 "Has solicitado una imagen, pero no te la daré :P";
+    }
+}
+
+```
+
+*Prueba en tu navegador:* `localhost:8080/contacto`, `localhost:8080/documentos/hola` y `localhost:8080/foto.jpg`.
+
+---
+
+### 2. Dominios Virtuales (server_name)
+
+**Objetivo:** Manejar dos sitios diferentes en el mismo servidor.
+
+Como estamos en Localhost, usaremos puertos diferentes para simular "sitios" distintos. Agrega un nuevo archivo `conf/segundo_sitio.conf`:
+
+```nginx
+server {
+    listen 80;
+    server_name sitio2.local; # En Docker, esto respondería si tuvieras el host configurado
+
+    location / {
+        return 200 "Bienvenido al SEGUNDO sitio virtual";
+    }
+}
+
+```
+
+---
+
+### 3. Reescrituras y Redirecciones (`return` y `rewrite`)
+
+**Objetivo:** Enviar al usuario a otro lugar.
+
+Añade esto a tu `sitio.conf`:
+
+```nginx
+location /vieja-ruta {
+    return 301 https://google.com; # Redirección permanente
+}
+
+location /buscar {
+    # Reescribe la URL internamente de /buscar/algo a /search?q=algo
+    rewrite ^/buscar/(.*)$ /search?q=$1 last;
+}
+
+```
+
+---
+
+### 4. Manejo de Errores (`error_page`)
+
+**Objetivo:** Que el usuario no vea la página fea de Nginx.
+
+1. Crea un archivo `html/404.html` con un mensaje divertido.
+2. Añade esto a tu `server`:
+
+```nginx
+error_page 404 /404.html;
+
+location = /404.html {
+    root /usr/share/nginx/html;
+    internal; # Solo Nginx puede acceder a esta ruta internamente
+}
+
+```
+
+---
+
+### 5. Compresión y Caché (`gzip` y `expires`)
+
+**Objetivo:** Hacer el sitio más rápido.
+
+Agrega esto dentro de tu bloque `server`:
+
+```nginx
+# Habilitar Gzip
+gzip on;
+gzip_types text/plain text/css application/json;
+
+# Caché del navegador para imágenes
+location ~* \.(ico|css|js|gif|jpe?g|png)$ {
+    expires 30d; # El navegador guardará estas fotos por 30 días
+    add_header Cache-Control "public, no-transform";
+}
+
+```
+
+---
+
+### English Practice (Thursday: Modals)
+
+* **Recommendation:** You **should** use the `=` modifier for the most visited locations to speed up the matching process.
+* **Possibility:** If you don't use the `last` flag in a `rewrite`, Nginx **might** fall into an infinite loop.
+* **Capability:** With Gzip, you **can** reduce the size of your text files by up to **70%**.
+* **Requirement:** You **must** remember that `error_page` **will not** work if the path to the error file is incorrect.
+* **Question:** **Can** I use different `error_log` files for different `server` blocks? (Answer: Yes, you **can** define them separately to debug each site better).
+
+¿Qué te parece si probamos la **redirección 404**? Crea el archivo HTML y trata de entrar a una ruta que no exista en tu navegador. Me dices si funciona.

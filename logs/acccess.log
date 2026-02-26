@@ -3,3 +3,10 @@
 [26/Feb/2026:16:36:00 +0000] IP:172.19.0.1 Solicitud:"GET / HTTP/1.1" Status:304
 [26/Feb/2026:16:36:00 +0000] IP:172.19.0.1 Solicitud:"GET / HTTP/1.1" Status:304
 [26/Feb/2026:16:36:05 +0000] IP:172.19.0.1 Solicitud:"GET / HTTP/1.1" Status:200
+[26/Feb/2026:16:48:32 +0000] IP:172.19.0.1 Solicitud:"GET / HTTP/1.1" Status:404
+[26/Feb/2026:16:48:34 +0000] IP:172.19.0.1 Solicitud:"GET / HTTP/1.1" Status:404
+[26/Feb/2026:16:48:51 +0000] IP:172.19.0.1 Solicitud:"GET /documents HTTP/1.1" Status:200
+[26/Feb/2026:16:48:57 +0000] IP:172.19.0.1 Solicitud:"GET /contact HTTP/1.1" Status:200
+[26/Feb/2026:16:49:08 +0000] IP:172.19.0.1 Solicitud:"GET /foto.png HTTP/1.1" Status:200
+[26/Feb/2026:16:49:15 +0000] IP:172.19.0.1 Solicitud:"GET /foto.jpg HTTP/1.1" Status:200
+[26/Feb/2026:16:49:21 +0000] IP:172.19.0.1 Solicitud:"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" Status:404
