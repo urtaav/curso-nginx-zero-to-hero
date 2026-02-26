@@ -5,3 +5,9 @@
 2026/02/26 16:48:34 [error] 38#38: *3 "/etc/nginx/html/index.html" is not found (2: No such file or directory), client: 172.19.0.1, server: misitio.local, request: "GET / HTTP/1.1", host: "localhost:8181"
 2026/02/26 16:49:21 [error] 38#38: *3 open() "/etc/nginx/html/.well-known/appspecific/com.chrome.devtools.json" failed (2: No such file or directory), client: 172.19.0.1, server: misitio.local, request: "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1", host: "localhost:8181"
 2026/02/26 16:54:05 [notice] 62#62: signal process started
+2026/02/26 16:54:07 [error] 69#69: *4 open() "/etc/nginx/html/.well-known/appspecific/com.chrome.devtools.json" failed (2: No such file or directory), client: 172.19.0.1, server: misitio.local, request: "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1", host: "localhost:8181"
+2026/02/26 16:54:23 [error] 69#69: *4 "/etc/nginx/html/index.html" is not found (2: No such file or directory), client: 172.19.0.1, server: misitio.local, request: "GET / HTTP/1.1", host: "localhost:8181"
+2026/02/26 16:54:23 [error] 69#69: *4 open() "/etc/nginx/html/.well-known/appspecific/com.chrome.devtools.json" failed (2: No such file or directory), client: 172.19.0.1, server: misitio.local, request: "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1", host: "localhost:8181"
+2026/02/26 16:55:03 [error] 69#69: *4 "/etc/nginx/html/index.html" is not found (2: No such file or directory), client: 172.19.0.1, server: misitio.local, request: "GET / HTTP/1.1", host: "localhost:8181"
+2026/02/26 16:55:03 [error] 69#69: *4 open() "/etc/nginx/html/.well-known/appspecific/com.chrome.devtools.json" failed (2: No such file or directory), client: 172.19.0.1, server: misitio.local, request: "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1", host: "localhost:8181"
+2026/02/26 17:01:53 [notice] 87#87: signal process started
