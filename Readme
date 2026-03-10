@@ -241,15 +241,3 @@ location ~* \.(ico|css|js|gif|jpe?g|png)$ {
 }
 
 ```
-
----
-
-### English Practice (Thursday: Modals)
-
-* **Recommendation:** You **should** use the `=` modifier for the most visited locations to speed up the matching process.
-* **Possibility:** If you don't use the `last` flag in a `rewrite`, Nginx **might** fall into an infinite loop.
-* **Capability:** With Gzip, you **can** reduce the size of your text files by up to **70%**.
-* **Requirement:** You **must** remember that `error_page` **will not** work if the path to the error file is incorrect.
-* **Question:** **Can** I use different `error_log` files for different `server` blocks? (Answer: Yes, you **can** define them separately to debug each site better).
-
-¿Qué te parece si probamos la **redirección 404**? Crea el archivo HTML y trata de entrar a una ruta que no exista en tu navegador. Me dices si funciona.
