@@ -1,21 +1,32 @@
 services:
-  mi-app-backend:
+  # 1. Microservicio de Usuarios
+  ms-users:
     image: nginx:alpine
-    container_name: backend-app
-    volumes:
-      - ./html:/usr/share/nginx/html:ro # Corregido: volumes y /usr/
-    # No exponemos puertos para mantenerlo privado tras el proxy
+    command: >
+      sh -c "echo '{\"service\": \"users\", \"status\": \"online\"}' > /usr/share/nginx/html/index.html && nginx -g 'daemon off;'"
 
-  servidor-practica:
+  # 2. Microservicio de Productos
+  ms-products:
+    image: nginx:alpine
+    command: >
+      sh -c "echo '{\"service\": \"products\", \"count\": 150}' > /usr/share/nginx/html/index.html && nginx -g 'daemon off;'"
+
+  # 3. Frontend (Tu carpeta local /html)
+  frontend:
+    image: nginx:alpine
+    volumes:
+      - ./html/front:/usr/share/nginx/html:ro
+
+  # 4. El NGINX Principal (Proxy Inverso / Gateway)
+  nginx-gateway:
     image: nginx:latest
-    container_name: my-nginx-container
+    container_name: nginx-gateway-container
     ports:
       - "8181:80"
     volumes:
-      - ./html:/usr/share/nginx/html:ro
-      # Estructura recomendada:
-      - ./conf:/etc/nginx/conf.d:ro # Configuraciones de sitios específicos
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro # Configuración global
-      - ./logs:/var/log/nginx
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./conf:/etc/nginx/conf.d:ro
     depends_on:
-      - mi-app-backend
+      - ms-users
+      - ms-products
+      - frontend
