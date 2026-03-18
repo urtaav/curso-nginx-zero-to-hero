@@ -49,7 +49,7 @@ Objetivo: Entender el archivo "maestro".
 
 Crea el archivo nginx.conf en la raíz de tu proyecto. Este archivo es el que "envuelve" todo.
 # Directiva simple: define el usuario
-user nginx; 
+user nginx;
 
 # Bloque de eventos (Obligatorio)
 events {
@@ -241,3 +241,18 @@ location ~* \.(ico|css|js|gif|jpe?g|png)$ {
 }
 
 ```
+Módulo 4: NGINX como proxy inverso
+**¿Qué es un proxy inverso?**
+
+Diferencias entre proxy directo y proxy inverso.
+Casos de uso comunes.
+Configuración de un proxy inverso
+
+Directiva proxy_pass.
+Configuración de cabeceras (proxy_set_header).
+Manejo de conexiones persistentes.
+Proxy para aplicaciones dinámicas
+
+Configuración para servidores de aplicaciones (Node.js, PHP-FPM, Python, Ruby).
+Configuración de FastCGI para PHP.
+Integración con servidores como Gunicorn o uWSGI.

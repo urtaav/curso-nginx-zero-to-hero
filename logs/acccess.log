@@ -37,3 +37,10 @@
 [26/Feb/2026:17:14:54 +0000] IP:172.19.0.1 Solicitud:"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" Status:404
 [26/Feb/2026:17:15:00 +0000] IP:172.19.0.1 Solicitud:"GET / HTTP/1.1" Status:200
 [26/Feb/2026:17:15:00 +0000] IP:172.19.0.1 Solicitud:"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" Status:404
+[18/Mar/2026:15:33:05 +0000] IP:172.19.0.1 Solicitud:"GET / HTTP/1.1" Status:200
+[18/Mar/2026:15:33:06 +0000] IP:172.19.0.1 Solicitud:"GET /favicon.ico HTTP/1.1" Status:404
+[18/Mar/2026:16:14:12 +0000] IP:172.19.0.1 Solicitud:"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" Status:404
+[18/Mar/2026:16:14:18 +0000] IP:172.19.0.1 Solicitud:"GET / HTTP/1.1" Status:304
+[18/Mar/2026:16:14:19 +0000] IP:172.19.0.1 Solicitud:"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" Status:404
+[18/Mar/2026:16:23:45 +0000] IP:172.19.0.1 Solicitud:"GET / HTTP/1.1" Status:304
+[18/Mar/2026:16:23:45 +0000] IP:172.19.0.1 Solicitud:"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" Status:404

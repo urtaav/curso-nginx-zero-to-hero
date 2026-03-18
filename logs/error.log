@@ -35,3 +35,7 @@
 2026/02/26 17:14:54 [error] 165#165: *8 open() "/usr/share/nginx/html/.well-known/appspecific/com.chrome.devtools.json" failed (2: No such file or directory), client: 172.19.0.1, server: misitio.local, request: "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1", host: "localhost:8181"
 2026/02/26 17:14:58 [notice] 177#177: signal process started
 2026/02/26 17:15:00 [error] 183#183: *9 open() "/usr/share/nginx/html/.well-known/appspecific/com.chrome.devtools.json" failed (2: No such file or directory), client: 172.19.0.1, server: misitio.local, request: "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1", host: "localhost:8181"
+2026/03/18 15:33:06 [error] 20#20: *1 open() "/etc/nginx/html/favicon.ico" failed (2: No such file or directory), client: 172.19.0.1, server: misitio.local, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8181", referrer: "http://localhost:8181/"
+2026/03/18 16:10:16 [emerg] 32#32: host not found in upstream "mi-app-backend" in /etc/nginx/conf.d/reverse-proxy.conf:9
+2026/03/18 16:11:05 [emerg] 38#38: host not found in upstream "mi-app-backend" in /etc/nginx/conf.d/reverse-proxy.conf:9
+2026/03/18 16:11:36 [emerg] 44#44: host not found in upstream "my-app-backend" in /etc/nginx/conf.d/reverse-proxy.conf:9
