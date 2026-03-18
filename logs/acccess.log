@@ -1,46 +1,15 @@
-[26/Feb/2026:16:35:48 +0000] IP:172.19.0.1 Solicitud:"GET / HTTP/1.1" Status:304
-[26/Feb/2026:16:36:00 +0000] IP:172.19.0.1 Solicitud:"GET / HTTP/1.1" Status:304
-[26/Feb/2026:16:36:00 +0000] IP:172.19.0.1 Solicitud:"GET / HTTP/1.1" Status:304
-[26/Feb/2026:16:36:00 +0000] IP:172.19.0.1 Solicitud:"GET / HTTP/1.1" Status:304
-[26/Feb/2026:16:36:05 +0000] IP:172.19.0.1 Solicitud:"GET / HTTP/1.1" Status:200
-[26/Feb/2026:16:48:32 +0000] IP:172.19.0.1 Solicitud:"GET / HTTP/1.1" Status:404
-[26/Feb/2026:16:48:34 +0000] IP:172.19.0.1 Solicitud:"GET / HTTP/1.1" Status:404
-[26/Feb/2026:16:48:51 +0000] IP:172.19.0.1 Solicitud:"GET /documents HTTP/1.1" Status:200
-[26/Feb/2026:16:48:57 +0000] IP:172.19.0.1 Solicitud:"GET /contact HTTP/1.1" Status:200
-[26/Feb/2026:16:49:08 +0000] IP:172.19.0.1 Solicitud:"GET /foto.png HTTP/1.1" Status:200
-[26/Feb/2026:16:49:15 +0000] IP:172.19.0.1 Solicitud:"GET /foto.jpg HTTP/1.1" Status:200
-[26/Feb/2026:16:49:21 +0000] IP:172.19.0.1 Solicitud:"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" Status:404
-[26/Feb/2026:16:54:07 +0000] IP:172.19.0.1 Solicitud:"GET /foto.jpg HTTP/1.1" Status:200
-[26/Feb/2026:16:54:07 +0000] IP:172.19.0.1 Solicitud:"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" Status:404
-[26/Feb/2026:16:54:23 +0000] IP:172.19.0.1 Solicitud:"GET / HTTP/1.1" Status:404
-[26/Feb/2026:16:54:23 +0000] IP:172.19.0.1 Solicitud:"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" Status:404
-[26/Feb/2026:16:55:03 +0000] IP:172.19.0.1 Solicitud:"GET / HTTP/1.1" Status:404
-[26/Feb/2026:16:55:03 +0000] IP:172.19.0.1 Solicitud:"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" Status:404
-[26/Feb/2026:17:01:56 +0000] IP:172.19.0.1 Solicitud:"GET / HTTP/1.1" Status:200
-[26/Feb/2026:17:01:56 +0000] IP:172.19.0.1 Solicitud:"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" Status:404
-[26/Feb/2026:17:04:22 +0000] IP:172.19.0.1 Solicitud:"GET / HTTP/1.1" Status:304
-[26/Feb/2026:17:04:22 +0000] IP:172.19.0.1 Solicitud:"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" Status:404
-[26/Feb/2026:17:04:29 +0000] IP:172.19.0.1 Solicitud:"GET /google HTTP/1.1" Status:301
-[26/Feb/2026:17:04:32 +0000] IP:172.19.0.1 Solicitud:"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" Status:404
-[26/Feb/2026:17:04:32 +0000] IP:172.19.0.1 Solicitud:"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" Status:404
-[26/Feb/2026:17:04:43 +0000] IP:172.19.0.1 Solicitud:"GET /servicio/limpieza HTTP/1.1" Status:404
-[26/Feb/2026:17:04:43 +0000] IP:172.19.0.1 Solicitud:"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" Status:404
-[26/Feb/2026:17:08:00 +0000] IP:172.19.0.1 Solicitud:"GET /servicio/limpieza HTTP/1.1" Status:404
-[26/Feb/2026:17:08:00 +0000] IP:172.19.0.1 Solicitud:"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" Status:404
-[26/Feb/2026:17:08:04 +0000] IP:172.19.0.1 Solicitud:"GET /mipagina HTTP/1.1" Status:404
-[26/Feb/2026:17:08:04 +0000] IP:172.19.0.1 Solicitud:"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" Status:404
-[26/Feb/2026:17:13:46 +0000] IP:172.19.0.1 Solicitud:"GET /mipagina HTTP/1.1" Status:404
-[26/Feb/2026:17:13:46 +0000] IP:172.19.0.1 Solicitud:"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" Status:404
-[26/Feb/2026:17:13:55 +0000] IP:172.19.0.1 Solicitud:"GET / HTTP/1.1" Status:304
-[26/Feb/2026:17:13:55 +0000] IP:172.19.0.1 Solicitud:"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" Status:404
-[26/Feb/2026:17:14:32 +0000] IP:172.19.0.1 Solicitud:"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" Status:404
-[26/Feb/2026:17:14:54 +0000] IP:172.19.0.1 Solicitud:"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" Status:404
-[26/Feb/2026:17:15:00 +0000] IP:172.19.0.1 Solicitud:"GET / HTTP/1.1" Status:200
-[26/Feb/2026:17:15:00 +0000] IP:172.19.0.1 Solicitud:"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" Status:404
-[18/Mar/2026:15:33:05 +0000] IP:172.19.0.1 Solicitud:"GET / HTTP/1.1" Status:200
-[18/Mar/2026:15:33:06 +0000] IP:172.19.0.1 Solicitud:"GET /favicon.ico HTTP/1.1" Status:404
-[18/Mar/2026:16:14:12 +0000] IP:172.19.0.1 Solicitud:"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" Status:404
-[18/Mar/2026:16:14:18 +0000] IP:172.19.0.1 Solicitud:"GET / HTTP/1.1" Status:304
-[18/Mar/2026:16:14:19 +0000] IP:172.19.0.1 Solicitud:"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" Status:404
-[18/Mar/2026:16:23:45 +0000] IP:172.19.0.1 Solicitud:"GET / HTTP/1.1" Status:304
-[18/Mar/2026:16:23:45 +0000] IP:172.19.0.1 Solicitud:"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" Status:404
+[18/Mar/2026:18:37:10 +0000] Cliente:172.19.0.1 -> Proxy:localhost Status:304 Peticion:"GET / HTTP/1.1" Upstream_Addr:172.19.0.4:80 Tiempo_Respuesta:0.008 User_Agent:"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+[18/Mar/2026:18:37:10 +0000] Cliente:172.19.0.1 -> Proxy:localhost Status:404 Peticion:"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" Upstream_Addr:172.19.0.4:80 Tiempo_Respuesta:0.002 User_Agent:"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+[18/Mar/2026:18:37:10 +0000] Cliente:172.19.0.1 -> Proxy:localhost Status:304 Peticion:"GET /styles.css HTTP/1.1" Upstream_Addr:172.19.0.4:80 Tiempo_Respuesta:0.005 User_Agent:"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+[18/Mar/2026:18:37:10 +0000] Cliente:172.19.0.1 -> Proxy:localhost Status:304 Peticion:"GET /main.js HTTP/1.1" Upstream_Addr:172.19.0.4:80 Tiempo_Respuesta:0.003 User_Agent:"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+[18/Mar/2026:18:37:10 +0000] Cliente:172.19.0.1 -> Proxy:localhost Status:200 Peticion:"GET /api/users HTTP/1.1" Upstream_Addr:172.19.0.2:80 Tiempo_Respuesta:0.004 User_Agent:"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+[18/Mar/2026:18:37:10 +0000] Cliente:172.19.0.1 -> Proxy:localhost Status:200 Peticion:"GET /api/products HTTP/1.1" Upstream_Addr:172.19.0.3:80 Tiempo_Respuesta:0.005 User_Agent:"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+[18/Mar/2026:18:37:15 +0000] Cliente:172.19.0.1 -> Proxy:localhost Status:304 Peticion:"GET /api/external/posts HTTP/1.1" Upstream_Addr:172.67.167.151:443 Tiempo_Respuesta:0.225 User_Agent:"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+[18/Mar/2026:18:37:40 +0000] Cliente:172.19.0.1 -> Proxy:localhost Status:304 Peticion:"GET /api/users HTTP/1.1" Upstream_Addr:172.19.0.2:80 Tiempo_Respuesta:0.004 User_Agent:"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+[18/Mar/2026:18:37:41 +0000] Cliente:172.19.0.1 -> Proxy:localhost Status:304 Peticion:"GET /api/products HTTP/1.1" Upstream_Addr:172.19.0.3:80 Tiempo_Respuesta:0.001 User_Agent:"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+[18/Mar/2026:18:39:11 +0000] Cliente:172.19.0.1 -> Proxy:localhost Status:304 Peticion:"GET / HTTP/1.1" Upstream_Addr:172.19.0.4:80 Tiempo_Respuesta:0.008 User_Agent:"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+[18/Mar/2026:18:39:11 +0000] Cliente:172.19.0.1 -> Proxy:localhost Status:404 Peticion:"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" Upstream_Addr:172.19.0.4:80 Tiempo_Respuesta:0.004 User_Agent:"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+[18/Mar/2026:18:39:11 +0000] Cliente:172.19.0.1 -> Proxy:localhost Status:304 Peticion:"GET /styles.css HTTP/1.1" Upstream_Addr:172.19.0.4:80 Tiempo_Respuesta:0.005 User_Agent:"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+[18/Mar/2026:18:39:11 +0000] Cliente:172.19.0.1 -> Proxy:localhost Status:304 Peticion:"GET /main.js HTTP/1.1" Upstream_Addr:172.19.0.4:80 Tiempo_Respuesta:0.006 User_Agent:"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+[18/Mar/2026:18:39:11 +0000] Cliente:172.19.0.1 -> Proxy:localhost Status:304 Peticion:"GET /api/users HTTP/1.1" Upstream_Addr:172.19.0.2:80 Tiempo_Respuesta:0.009 User_Agent:"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+[18/Mar/2026:18:39:11 +0000] Cliente:172.19.0.1 -> Proxy:localhost Status:304 Peticion:"GET /api/products HTTP/1.1" Upstream_Addr:172.19.0.3:80 Tiempo_Respuesta:0.034 User_Agent:"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
