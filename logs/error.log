@@ -39,3 +39,7 @@
 2026/03/19 00:02:40 [error] 27#27: *25 open() "/etc/nginx/html/.well-known/appspecific/com.chrome.devtools.json" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1", host: "localhost"
 2026/03/19 00:02:42 [error] 27#27: *25 open() "/etc/nginx/html/.well-known/appspecific/com.chrome.devtools.json" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1", host: "localhost"
 2026/03/19 00:02:42 [error] 27#27: *25 open() "/etc/nginx/html/.well-known/appspecific/com.chrome.devtools.json" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1", host: "localhost"
+2026/03/19 00:11:17 [emerg] 1#1: open() "/etc/nginx/conf.d/balanceo.conf" failed (2: No such file or directory) in /etc/nginx/nginx.conf:27
+2026/03/19 16:19:36 [emerg] 1#1: "limit_req_zone" directive is not allowed here in /etc/nginx/conf.d/dominios.conf:13
+2026/03/19 16:21:03 [emerg] 1#1: "proxy_cache_path" directive is not allowed here in /etc/nginx/conf.d/cache.conf:18
+2026/03/19 16:21:43 [emerg] 1#1: duplicate upstream "cluster_spring_backend" in /etc/nginx/conf.d/balanceo.conf:1
