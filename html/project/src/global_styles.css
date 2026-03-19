@@ -1,1 +1,16 @@
-/* Add application styles & imports to this file! */
+@import "tailwindcss";
+@import "primeicons/primeicons.css";
+
+
+@theme {
+  --color-primary: #000f24;
+  --color-primary-hover: #0d2140;
+  --font-sans: 'Inter', sans-serif;
+  --font-headline: 'Manrope', sans-serif;
+}
+
+/* styles.css */
+input[pInputText].custom-search {
+  all: unset;
+  display: block;
+}
